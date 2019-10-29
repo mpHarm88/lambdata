@@ -13,7 +13,7 @@ with open("README.md", "r") as fh:
     LONG_DESCRIPTON = fh.read()
     setuptools.setup(
             name="lambdata-mpharm88",
-            version="0.1.0",
+            version="0.1.2",
             author="mpharm88",
             description="a collection of data science helper functions",
             long_description=LONG_DESCRIPTON,

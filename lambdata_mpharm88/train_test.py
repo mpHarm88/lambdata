@@ -16,28 +16,28 @@ from sklearn.model_selection import train_test_split
 
 
 def train_test(df, target, feat):
- """
-THIS FUNCTION DOES NOT DO TIME SERIES SPLITS
+    """
 
-This is a function to split your dataframe into you training, validation, test,
-and cross validations dataframes. This function returns 8 values
-so have 8 var names ready to capture all values outputted by the funcntion. 
- 
-Example (Using Titanic data set as example filler target/features):
-     X_train, y_train, X_val, y_val, X_test, y_test, X_test_CV, y_test_CV =
-     train_test(df, "survived", ["age", "fare", "class"])
+    THIS FUNCTION DOES NOT DO TIME SERIES SPLITS
 
-This inputs of the function are as follows:
-     df = the dataframe to be split (cleaned or dirty)
-     target = Your target (y)
-     feat = Your features being used passed in as a list or a var pointing to a 
-     list           
- 
-This function will also display a labled list of the shape of each new
-dataframe that was created (8 dataframes in total) for quick fact checking
-capabilities
-"""
+    This is a function to split your dataframe into you training, validation, test,
+    and cross validations dataframes. This function returns 8 values
+    so have 8 var names ready to capture all values outputted by the funcntion.
 
+    Example (Using Titanic data set as example filler target/features):
+    X_train, y_train, X_val, y_val, X_test, y_test, X_test_CV, y_test_CV =
+    train_test(df, "survived", ["age", "fare", "class"])
+
+    This inputs of the function are as follows:
+    df = the dataframe to be split (cleaned or dirty)
+    target = Your target (y)
+    feat = Your features being used passed in as a list or a var pointing to a 
+    list          
+
+    This function will also display a labled list of the shape of each new
+    dataframe that was created (8 dataframes in total) for quick fact checking
+    capabilities
+    """
     df = pd.DataFrame(data=df)
     df = df.copy()
     training, testing = train_test_split(df, random_state=42)
@@ -81,3 +81,4 @@ capabilities
             y_test,
             X_test_CV,
             y_test_CV)
+
