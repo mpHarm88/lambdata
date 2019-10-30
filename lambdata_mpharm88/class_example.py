@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import category_encoders as ce
+from category_encoders import OrdinalEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import accuracy_score
@@ -123,7 +123,7 @@ class Baseline:
         mean = np.mean(s3)
 
         model = make_pipeline(
-             ce.OrdinalEncoder(),
+             OrdinalEncoder(),
              StandardScaler(),
              SimpleImputer(strategy='median'),
              XGBRegressor(
@@ -150,7 +150,7 @@ class Baseline:
         """
         class_index = 1
         processor = make_pipeline(
-            ce.OrdinalEncoder(),
+            OrdinalEncoder(),
             SimpleImputer(strategy='median')
         )
 
