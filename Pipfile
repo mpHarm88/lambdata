@@ -9,7 +9,9 @@ twine = "*"
 [packages]
 numpy = "*"
 pandas = "*"
-sklearn = "*"
+scikit-learn = "*"
+xgboost = "*"
+category-encoders = "*"
 
 [requires]
 python_version = "3.7"
