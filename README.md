@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://unsplash.com/photos/fyurq2Qfe2Q"><br>
+  <img src="https://github.com/mpHarm88/lambdata/blob/master/lambdata.jpg.png"><br>
 </div>
 
 # lambdata
