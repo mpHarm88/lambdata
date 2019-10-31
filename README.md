@@ -22,7 +22,7 @@ Here is a list of what lambdata_mpharm88 does well:
       - Month column
       - Day column
       - **Season column**
-  - Performing a **train/test split** using your original data frame, target (y), and features. **This function will give you 8 **
+  - Performing a **train/test split** using your original data frame, target (y), and features. **This function will give you 8 
       **separate dataframes** including:
       - X training set
       - y training set
