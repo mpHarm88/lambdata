@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-from category_encoders import OrdinalEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import accuracy_score
@@ -11,6 +10,7 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 from xgboost import XGBClassifier
 from sklearn.metrics import roc_auc_score
+from category_encoders import OrdinalEncoder
 
 
 class Baseline:
@@ -149,16 +149,24 @@ class Baseline:
         sets provided.
         """
         class_index = 1
-        processor = make_pipeline(
-            OrdinalEncoder(),
-            SimpleImputer(strategy='median')
-        )
+        # processor = make_pipeline(
+        #    ce.ordinal.OrdinalEncoder(),
+        #    SimpleImputer(strategy='median')
+        # )
 
-        X_train_processed = processor.fit_transform(X_train)
-        X_test_processed = processor.transform(X_test)
+        # X_train_processed = processor.fit_transform(X_train)
+        # X_test_processed = processor.transform(X_test)
+        
+        encoder = OrdinalEncoder()
+        imputer = SimpleImputer()
 
-        eval_set = [(X_train_processed, y_train),
-                    (X_test_processed, y_test)]
+        X_train_encoded = encoder.fit(X_train)
+        X_train_encoded = encoder.transform(X_train)
+        X_train_imputed = imputer.fit_transform(X_train_encoded)
+
+        X_test_encoded = encoder.fit(X_test)
+        X_test_encoded = encoder.transform(X_test)
+        X_test_imputed = imputer.fit_transform(X_test_encoded)
   
         model = XGBClassifier(
                 n_estimators=100,
@@ -166,12 +174,12 @@ class Baseline:
                 max_depth=10
             )
         
-        model.fit(X_train_processed, y_train, eval_metric='auc')
+        model.fit(X_train_imputed, y_train, eval_metric='auc')
 
         # Getting the predicted probabilities 
         y_pred = model.predict(X_test_processed)
-        y_pred_proba_train = model.predict_proba(X_train_processed)[:, class_index]
-        y_pred_proba_test = model.predict_proba(X_test_processed)[:, class_index]
+        y_pred_proba_train = model.predict_proba(X_train_imputed)[:, class_index]
+        y_pred_proba_test = model.predict_proba(X_test_imputed)[:, class_index]
 
         train_roc = roc_auc_score(y_train, y_pred_proba_train)
         test_roc = roc_auc_score(y_test, y_pred_proba_test)

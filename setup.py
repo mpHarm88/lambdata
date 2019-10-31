@@ -6,14 +6,19 @@ import setuptools
 
 REQUIRED = [
         "numpy",
-        "pandas"
+        "pandas",
+        "category-encoders",
+        "statsmodels",
+        "scikit-learn",
+        "patsy",
+        "scipy"
         ]
 
 with open("README.md", "r") as fh:
     LONG_DESCRIPTON = fh.read()
     setuptools.setup(
             name="lambdata-mpharm88",
-            version="0.1.6",
+            version="0.3.0",
             author="mpharm88",
             description="a collection of data science helper functions",
             long_description=LONG_DESCRIPTON,
