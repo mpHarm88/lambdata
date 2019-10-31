@@ -16,14 +16,14 @@ lambdatas_mpharm88 is a **Python** package that lets you reach your model baseli
 ## Main Features
 Here is a list of what lambdata_mpharm88 does well:
   
-  - Changing a date column into 4 new columns including:
+  - Changing a date column into **4 new columns** including:
       - Pandas date time column
       - Year column
       - Month column
       - Day column
-      - Season column
-  - Performing a **train/test split** using your original data frame, target (y), and features. This function will give you 8 
-      separate dataframes including:
+      - **Season column**
+  - Performing a **train/test split** using your original data frame, target (y), and features. **This function will give you 8 **
+      **separate dataframes** including:
       - X training set
       - y training set
       - X validation set
@@ -33,11 +33,11 @@ Here is a list of what lambdata_mpharm88 does well:
       - X cross validation set
       - y cross validation set
       - Shapes of all dataframes outputted
-  - A simple XGBClassifier including an Ordinal Encoder and Simple Imputer that out puts:
-      - Training ROC/AUC Score 
-      - Testing ROC/AUC score
+  - A simple **XGBClassifier** including an Ordinal Encoder and Simple Imputer that out puts:
+      - Training **ROC/AUC** Score 
+      - Testing **ROC/AUC** score
       - Mean baseline of majority class in target column
-  - A simple XGBRegressor including an Ordinal Encoder and Simple Imputer
-      - Training RMSE
-      - Testing RMSE
+  - A simple **XGBRegressor** including an Ordinal Encoder and Simple Imputer
+      - Training **RMSE**
+      - Testing **RMSE**
       - Mean baseline of target column
