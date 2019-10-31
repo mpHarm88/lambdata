@@ -22,8 +22,8 @@ Here is a list of what lambdata_mpharm88 does well:
       - Month column
       - Day column
       - **Season column**
-  - Performing a **train/test split** using your original data frame, target (y), and features. **This function will give you 8 
-      **separate dataframes** including:
+  - Performing a **train/test split** using your original data frame, target (y), and features. This function will give you 8 
+    separate dataframes including:
       - X training set
       - y training set
       - X validation set
@@ -41,3 +41,16 @@ Here is a list of what lambdata_mpharm88 does well:
       - Training **RMSE**
       - Testing **RMSE**
       - Mean baseline of target column
+      
+## Dependencies
+- [XGBoost](https://xgboost.readthedocs.io/en/latest/)
+- [Pandas](https://pandas.pydata.org/pandas-docs/stable/)
+- [Numpy](https://www.numpy.org)
+- [Category Encoders](https://contrib.scikit-learn.org/categorical-encoding/)
+- [Scikit Learn](https://scikit-learn.org/stable/documentation.html)
+
+## License
+[MIT License](https://opensource.org/licenses/MIT)
+
+## Documentation
+Currently this read me is the only documentation available. If you would like to join the party and help build this package feel free to create a pull request with your changes. All feedback is appreciated and together we can turn lambdata_mpharm88 into a tool thats used by people all over the world.
