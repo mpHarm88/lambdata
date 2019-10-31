@@ -4,5 +4,4 @@
 
 ---
 
-# lambdata
-A collection of Data Science helper functions
+# lambdata : A collection of Data Science helper functions
