@@ -53,4 +53,4 @@ Here is a list of what lambdata_mpharm88 does well:
 [MIT License](https://opensource.org/licenses/MIT)
 
 ## Documentation
-Currently this read me is the only documentation available. If you would like to join the party and help build this package feel free to create a pull request with your changes. All feedback is appreciated and together we can turn lambdata_mpharm88 into a tool thats used by people all over the world.
+Currently, this read me is the only documentation available. If you would like to join the party and help build this package, feel free to create a pull request with your changes. All feedback is appreciated, and together we can turn lambdata_mpharm88 into a tool that's used by people all over the world.
