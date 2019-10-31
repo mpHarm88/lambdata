@@ -5,7 +5,7 @@
 ---
 
 # lambdata 
-A collection of Data Science helper functions
+A collection of Data Science helper functions. **Currently xgb_class and xgb_reg do not output as intended and are being investigated for potential issues.** 
 
 ## Download
 https://test.pypi.org/project/lambdata-mpharm88/
