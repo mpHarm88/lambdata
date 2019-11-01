@@ -16,7 +16,7 @@ lambdatas_mpharm88 is a **Python** package that lets you reach your model baseli
 ## Main Features
 Here is a list of what lambdata_mpharm88 does well:
   
-  - Changing a date column into **4 new columns** including:
+  - Changing a date column into **５ new columns** including:
       - Pandas date time column
       - Year column
       - Month column
